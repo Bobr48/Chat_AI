@@ -1,0 +1,100 @@
+2025-03-24 20:50:10 - INFO - OpenRouterClient initialized successfully
+2025-03-24 20:50:10 - DEBUG - Fetching available models
+2025-03-24 20:50:11 - INFO - Retrieved 279 models
+2025-03-24 20:50:35 - INFO - Приложение запущено
+2025-03-24 20:50:35 - INFO - Приложение запущено
+2025-03-24 20:52:21 - INFO - OpenRouterClient initialized successfully
+2025-03-24 20:52:21 - DEBUG - Fetching available models
+2025-03-24 20:52:23 - INFO - Retrieved 280 models
+2025-03-24 20:52:24 - INFO - Приложение запущено
+2025-03-24 20:52:24 - INFO - Приложение запущено
+2025-03-24 20:52:52 - DEBUG - Sending message to model: meta-llama/llama-3.1-8b-instruct:free
+2025-03-24 20:52:52 - DEBUG - Sending message to model: meta-llama/llama-3.1-8b-instruct:free
+2025-03-24 20:52:52 - DEBUG - Making API request
+2025-03-24 20:52:52 - DEBUG - Making API request
+2025-03-24 20:52:54 - INFO - Successfully received response from API
+2025-03-24 20:52:54 - INFO - Successfully received response from API
+2025-03-24 20:52:54 - INFO - Performance metrics - CPU: 1.2%, Memory: 0.4%, Threads: 10, Uptime: 31s
+2025-03-24 20:52:54 - INFO - Performance metrics - CPU: 1.2%, Memory: 0.4%, Threads: 10, Uptime: 31s
+2025-03-24 20:52:54 - WARNING - Performance warning: High CPU usage: 195.3%
+2025-03-24 20:52:54 - WARNING - Performance warning: High CPU usage: 195.3%
+2025-03-24 20:53:10 - DEBUG - Sending message to model: openai/chatgpt-4o-latest
+2025-03-24 20:53:10 - DEBUG - Sending message to model: openai/chatgpt-4o-latest
+2025-03-24 20:53:10 - DEBUG - Making API request
+2025-03-24 20:53:10 - DEBUG - Making API request
+2025-03-24 20:53:11 - INFO - Successfully received response from API
+2025-03-24 20:53:11 - INFO - Successfully received response from API
+2025-03-24 20:53:11 - ERROR - Ошибка API: {'message': 'More credits are required to run this request. 16384 token capacity required, 2666 available. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': 'OpenAI'}}
+2025-03-24 20:53:11 - ERROR - Ошибка API: {'message': 'More credits are required to run this request. 16384 token capacity required, 2666 available. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': 'OpenAI'}}
+2025-03-24 20:53:11 - INFO - Performance metrics - CPU: 2.1%, Memory: 0.4%, Threads: 10, Uptime: 48s
+2025-03-24 20:53:11 - INFO - Performance metrics - CPU: 2.1%, Memory: 0.4%, Threads: 10, Uptime: 48s
+2025-03-24 20:53:11 - WARNING - Performance warning: High CPU usage: 97.7%
+2025-03-24 20:53:11 - WARNING - Performance warning: High CPU usage: 97.7%
+2025-03-24 20:53:28 - DEBUG - Sending message to model: deepseek/deepseek-r1:free
+2025-03-24 20:53:28 - DEBUG - Sending message to model: deepseek/deepseek-r1:free
+2025-03-24 20:53:28 - DEBUG - Making API request
+2025-03-24 20:53:28 - DEBUG - Making API request
+2025-03-24 20:53:31 - INFO - Successfully received response from API
+2025-03-24 20:53:31 - INFO - Successfully received response from API
+2025-03-24 20:53:31 - INFO - Performance metrics - CPU: 1.4%, Memory: 0.4%, Threads: 7, Uptime: 68s
+2025-03-24 20:53:31 - INFO - Performance metrics - CPU: 1.4%, Memory: 0.4%, Threads: 7, Uptime: 68s
+2025-03-24 20:53:31 - WARNING - Performance warning: High CPU usage: 100.8%
+2025-03-24 20:53:31 - WARNING - Performance warning: High CPU usage: 100.8%
+2025-03-24 21:03:53 - INFO - OpenRouterClient initialized successfully
+2025-03-24 21:03:53 - DEBUG - Fetching available models
+2025-03-24 21:03:54 - INFO - Retrieved 280 models
+2025-03-24 21:03:55 - INFO - Приложение запущено
+2025-03-24 21:03:55 - INFO - Приложение запущено
+2025-03-24 21:04:02 - DEBUG - Sending message to model: {'id': 'deepseek/deepseek-chat-v3-0324:free', 'name': 'DeepSeek: DeepSeek V3 0324 (free)'}
+2025-03-24 21:04:02 - DEBUG - Sending message to model: {'id': 'deepseek/deepseek-chat-v3-0324:free', 'name': 'DeepSeek: DeepSeek V3 0324 (free)'}
+2025-03-24 21:04:02 - DEBUG - Making API request
+2025-03-24 21:04:02 - DEBUG - Making API request
+2025-03-24 21:04:03 - ERROR - API request failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/completions
+Traceback (most recent call last):
+  File "C:\Python\Projects\51\src\api\openrouter.py", line 134, in send_message
+    response.raise_for_status()
+  File "C:\Python\Projects\51\.venv\Lib\site-packages\requests\models.py", line 1022, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/completions
+2025-03-24 21:04:03 - ERROR - API request failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/completions
+Traceback (most recent call last):
+  File "C:\Python\Projects\51\src\api\openrouter.py", line 134, in send_message
+    response.raise_for_status()
+  File "C:\Python\Projects\51\.venv\Lib\site-packages\requests\models.py", line 1022, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/completions
+2025-03-24 21:04:03 - ERROR - Ошибка API: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/completions
+2025-03-24 21:04:03 - ERROR - Ошибка API: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/completions
+2025-03-24 21:04:03 - ERROR - Ошибка отправки сообщения: Error binding parameter 1: type 'dict' is not supported
+2025-03-24 21:04:03 - ERROR - Ошибка отправки сообщения: Error binding parameter 1: type 'dict' is not supported
+2025-03-24 21:04:12 - DEBUG - Sending message to model: mistralai/mistral-small-3.1-24b-instruct:free
+2025-03-24 21:04:12 - DEBUG - Sending message to model: mistralai/mistral-small-3.1-24b-instruct:free
+2025-03-24 21:04:12 - DEBUG - Making API request
+2025-03-24 21:04:12 - DEBUG - Making API request
+2025-03-24 21:04:24 - INFO - Successfully received response from API
+2025-03-24 21:04:24 - INFO - Successfully received response from API
+2025-03-24 21:04:24 - INFO - Performance metrics - CPU: 2.2%, Memory: 0.4%, Threads: 10, Uptime: 30s
+2025-03-24 21:04:24 - INFO - Performance metrics - CPU: 2.2%, Memory: 0.4%, Threads: 10, Uptime: 30s
+2025-03-24 21:27:32 - INFO - OpenRouterClient initialized successfully
+2025-03-24 21:27:32 - DEBUG - Fetching available models
+2025-03-24 21:27:33 - INFO - Retrieved 281 models
+2025-03-24 21:27:34 - INFO - Приложение запущено
+2025-03-24 21:27:34 - INFO - Приложение запущено
+2025-03-24 21:28:06 - DEBUG - Sending message to model: deepseek/deepseek-chat-v3-0324:free
+2025-03-24 21:28:06 - DEBUG - Sending message to model: deepseek/deepseek-chat-v3-0324:free
+2025-03-24 21:28:06 - DEBUG - Making API request
+2025-03-24 21:28:06 - DEBUG - Making API request
+2025-03-24 21:28:19 - INFO - Successfully received response from API
+2025-03-24 21:28:19 - INFO - Successfully received response from API
+2025-03-24 21:28:19 - INFO - Performance metrics - CPU: 0.7%, Memory: 0.4%, Threads: 10, Uptime: 47s
+2025-03-24 21:28:19 - INFO - Performance metrics - CPU: 0.7%, Memory: 0.4%, Threads: 10, Uptime: 47s
+2025-03-24 21:28:19 - WARNING - Performance warning: High CPU usage: 100.8%
+2025-03-24 21:28:19 - WARNING - Performance warning: High CPU usage: 100.8%
+2025-03-24 21:28:41 - DEBUG - Sending message to model: deepseek/deepseek-chat-v3-0324:free
+2025-03-24 21:28:41 - DEBUG - Sending message to model: deepseek/deepseek-chat-v3-0324:free
+2025-03-24 21:28:41 - DEBUG - Making API request
+2025-03-24 21:28:41 - DEBUG - Making API request
+2025-03-24 21:29:24 - INFO - Successfully received response from API
+2025-03-24 21:29:24 - INFO - Successfully received response from API
+2025-03-24 21:29:24 - INFO - Performance metrics - CPU: 0.6%, Memory: 0.4%, Threads: 7, Uptime: 111s
+2025-03-24 21:29:24 - INFO - Performance metrics - CPU: 0.6%, Memory: 0.4%, Threads: 7, Uptime: 111s

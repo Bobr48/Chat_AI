@@ -1,30 +1,30 @@
-# Import required standard Python libraries
-import os  # For OS operations
-import sys  # For system parameters and functions
-import shutil  # For file and directory operations
-import subprocess  # For running external processes
-from pathlib import Path  # For filesystem path operations
+# Импортируем необходимые стандартные библиотеки Python
+import os  # Для работы с операционной системой
+import sys  # Для доступа к системным параметрам и функциям
+import shutil  # Для операций с файлами и директориями
+import subprocess  # Для запуска внешних процессов
+from pathlib import Path  # Для удобной работы с путями файловой системы
 
 def build_windows():
-    """Build Windows executable using PyInstaller"""
+    """Сборка исполняемого файла для Windows с помощью PyInstaller"""
     print("Building Windows executable...")
     
-    # Install project dependencies for Windows from requirements.txt
-    # sys.executable - path to current Python interpreter
+    # Устанавливаем зависимости проекта для Windows из файла requirements.txt
+    # sys.executable - путь к текущему интерпретатору Python
     subprocess.run([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
     
-    # Create bin directory if it doesn't exist
-    # exist_ok=True prevents error if directory already exists
+    # Создаём директорию bin, если она не существует
+    # exist_ok=True позволяет не выбрасывать ошибку, если директория уже существует
     bin_dir = Path("bin")
     bin_dir.mkdir(exist_ok=True)
     
-    # Run PyInstaller with parameters:
-    # --onefile: create single executable
-    # --windowed: run without console window
-    # --name: set output filename
-    # --clean: clean PyInstaller cache before building
-    # --noupx: don't use UPX for compression
-    # --uac-admin: request admin rights on launch
+    # Запускаем PyInstaller со следующими параметрами:
+    # --onefile: создать один исполняемый файл
+    # --windowed: запускать без консольного окна
+    # --name: задать имя выходного файла
+    # --clean: очистить кэш PyInstaller перед сборкой
+    # --noupx: не использовать UPX для сжатия
+    # --uac-admin: запрашивать права администратора при запуске
     subprocess.run([
         "pyinstaller",
         "--onefile",
@@ -36,8 +36,8 @@ def build_windows():
         "src/main.py"
     ])
     
-    # Move built file to bin directory
-    # Use try/except to handle potential move errors
+    # Перемещаем собранный файл в директорию bin
+    # Используем try/except для обработки возможных ошибок при перемещении
     try:
         shutil.move("dist/AI Chat.exe", "bin/AIChat.exe")
         print("Windows build completed! Executable location: bin/AIChat.exe")
@@ -45,21 +45,21 @@ def build_windows():
         print("Windows build completed! Executable location: dist/AI Chat.exe")
 
 def build_linux():
-    """Build Linux executable using PyInstaller"""
+    """Сборка исполняемого файла для Linux с помощью PyInstaller"""
     print("Building Linux executable...")
     
-    # Install project dependencies for Linux
+    # Устанавливаем зависимости проекта для Linux
     subprocess.run([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
     
-    # Create bin directory if it doesn't exist
+    # Создаём директорию bin, если она не существует
     bin_dir = Path("bin")
     bin_dir.mkdir(exist_ok=True)
     
-    # Run PyInstaller for Linux with parameters:
-    # --onefile: create single executable
-    # --windowed: run without console window
-    # --icon: set application icon
-    # --name: set output filename
+    # Запускаем PyInstaller для Linux со следующими параметрами:
+    # --onefile: создать один исполняемый файл
+    # --windowed: запускать без консольного окна
+    # --icon: указать иконку приложения
+    # --name: задать имя выходного файла
     subprocess.run([
         "pyinstaller",
         "--onefile",
@@ -69,7 +69,7 @@ def build_linux():
         "src/main.py"
     ])
     
-    # Move built file to bin directory
+    # Перемещаем собранный файл в директорию bin
     try:
         shutil.move("dist/aichat", "bin/aichat")
         print("Linux build completed! Executable location: bin/aichat")
@@ -77,20 +77,20 @@ def build_linux():
         print("Linux build completed! Executable location: dist/aichat")
 
 def main():
-    """Main build function
+    """Основная функция сборки
     
-    Determines operating system and runs appropriate build function
+    Определяет операционную систему и запускает соответствующую функцию сборки
     """
-    # Check operating system type
-    if sys.platform.startswith('win'):  # If Windows
+    # Проверяем тип операционной системы
+    if sys.platform.startswith('win'):  # Если Windows
         build_windows()
-    elif sys.platform.startswith('linux'):  # If Linux
+    elif sys.platform.startswith('linux'):  # Если Linux
         build_linux()
-    else:  # If other OS
+    else:  # Если другая ОС
         print("Unsupported platform")
 
-# Script entry point
-# If script is run directly (not imported as module),
-# run main function
+# Точка входа в скрипт
+# Если скрипт запущен напрямую (не импортирован как модуль),
+# то запускаем основную функцию
 if __name__ == "__main__":
     main()
